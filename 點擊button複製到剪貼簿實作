@@ -1,0 +1,24 @@
+簡單的點擊button複製到剪貼簿實作
+
+
+<script>
+  function copy()
+  {
+    var copysrt=document.getElementById("copystr").value;
+    window.clipboardData.setData("Text",copysrt);
+    alert("複製成功!請貼到內文上!");
+  }
+</script>
+
+<html>
+<head>
+</head>
+
+
+<body>
+
+<textarea style="display: none" id="copystr" name="copystr">文字</textarea>
+<input type="submit" value="複   製" onclick="copy()">
+
+</body>
+</html>
