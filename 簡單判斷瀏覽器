@@ -1,0 +1,18 @@
+function whichborwser() {
+//取得瀏覽器種類
+  var appName = navigator.appName.toString();
+//取得瀏覽器版本
+  var Version = navigator.appVersion.toString();
+//chrome跟火狐瀏覽器種類都是Netscape，所以要多一段版本判斷
+  if( appName.match('Netscape') ) {
+    if( Version.indexOf('Chrome') >-1 ){
+      alert("在CHROME~~~~~~~~~");
+    }else{
+      alert("在FIREFOX~~~~~~~~~");
+    }
+  }
+//IE瀏覽器
+  if( appName.match('Microsoft Internet Explorer') ){
+    alert("在IE~~~~~~~~");
+  }
+}
